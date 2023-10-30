@@ -1,0 +1,389 @@
+/* Fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Global */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page */
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+/* Main-header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+.main-header__link {
+  display: block;
+}
+
+.main-header__link:hover {
+  opacity: 0.5;
+}
+
+.main-header__link:active {
+  opacity: 0.7;
+}
+
+/* Main-nav */
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav__email {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 0;
+  padding-left: 30px;
+}
+
+.main-nav__email::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/email.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 0;
+}
+
+.main-nav__email:hover {
+  color: #c7c065;
+  transition: all 0.3s;
+}
+
+.main-nav__email:active {
+  opacity: 0.7;
+}
+
+.main-nav__box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid #68b738;
+  border-radius: 16px;
+}
+
+.main-nav__tel {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 0;
+  padding-left: 35px;
+}
+
+.main-nav__tel::before {
+  content: "";
+  position: absolute;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  left: 0;
+}
+
+.main-nav__tel--viber::before {
+  background-image: url("../img/viber.svg");
+}
+
+.main-nav__tel--whatsapp::before {
+  background-image: url("../img/whatsapp.svg");
+}
+
+.main-nav__tel:hover {
+  color: #c7c065;
+  transition: all 0.3s;
+}
+
+.main-nav__tel:active {
+  opacity: 0.7;
+}
+
+/* Site-list */
+
+.site-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 540px;
+}
+
+.site-list__link {
+  display: block;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.site-list__link:hover {
+  color: #c7c065;
+  transition: all 0.3s;
+}
+
+.site-list__link:active {
+  opacity: 0.7;
+}
+
+/* Promo */
+
+.promo {
+  padding: 30px 100px;
+  overflow: hidden;
+}
+
+.promo__title {
+  position: relative;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.promo__title::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #68b738;
+  width: 10000%;
+  top: 58%;
+  right: 750px;
+}
+
+.promo__title::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #68b738;
+  width: 10000%;
+  top: 58%;
+  left: 750px
+}
+
+.promo__box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+  border: 2px solid #68b738;
+  border-radius: 16px;
+  box-shadow: 0 0px 53px 3px rgba(34, 60, 80, 0.2);
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 655px;
+}
+
+.promo__text {
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  margin: 0;
+}
+
+.promo__price {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  color: #68b738;
+}
+
+.promo__button-box {
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+}
+
+.promo__button {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #68b738;
+  padding: 10px 15px;
+  width: 250px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.promo__button:hover {
+  background-color: #c73f0a;
+  transition: all 0.3s;
+}
+
+.promo__button:active {
+  opacity: 0.5;
+}
+
+.promo__image {
+  display: block;
+  flex-grow: 1;
+}
+
+/* сontact-us */
+
+.сontact-us {
+  padding: 30px 100px;
+}
+
+/* Form */
+
+.form {
+  padding: 30px;
+  border: 2px solid #68b738;
+  border-radius: 16px;
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.form__input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form__user-input {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #444444;
+  text-transform: uppercase;
+  padding: 11px 45px 11px 20px;
+  margin: 0;
+  width: 500px;
+  border: 1px solid #68b738;
+  border-radius: 16px;
+  outline: none;
+}
+
+.form__user-input:hover {
+  border: 1px solid #e2c107;
+}
+
+.form__user-input:focus {
+  box-shadow: 0 0 0 2px #444444 inset;
+}
+
+.form__button {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #68b738;
+  padding: 10px 15px;
+  width: 250px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: #c73f0a;
+  transition: all 0.3s;
+}
+
+.form__button:active {
+  opacity: 0.5;
+}
